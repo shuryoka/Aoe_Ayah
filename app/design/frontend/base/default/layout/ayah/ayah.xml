@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout version="0.1.0">
+    <customer_account_create>
+        <reference name="head">
+            <action method="addCss"><stylesheet>css/ayah/ayah.css</stylesheet></action>
+        </reference>
+        <reference name="form.additional.info">
+            <block type="core/template" name="ayah_check" template="ayah/ayah_check.phtml" />
+        </reference>
+    </customer_account_create>
+</layout>

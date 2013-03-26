@@ -1,0 +1,14 @@
+<?php if (Mage::helper('ayah')->isActive()): ?>
+    <?php Mage::helper('ayah')->includeAyah(); ?>
+    <li class="fields ayah_register">
+    <?php
+        $ayah = new AYAH(array(
+            'publisher_key' => Mage::getStoreConfig('ayah/config/publickey'),
+            'scoring_key'   => Mage::getStoreConfig('ayah/config/scorekey'),
+            'debug_mode'    => Mage::getStoreConfigFlag('ayah/config/debug_mode')
+        ));
+        
+        echo $ayah->getPublisherHTML();
+    ?>
+    </li>
+<?php endif ?>

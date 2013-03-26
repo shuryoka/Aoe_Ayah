@@ -1,0 +1,7 @@
+app/code/community/Aoe/Ayah/                        app/code/community/Aoe/Ayah/
+app/design/frontend/base/default/layout/ayah/       app/design/frontend/base/default/layout/ayah/
+app/design/frontend/base/default/template/ayah/     app/design/frontend/base/default/template/ayah/
+app/locale/de_DE/Aoe_Ayah.csv                       app/locale/de_DE/Aoe_Ayah.csv
+app/etc/modules/Aoe_Ayah.xml                        app/etc/modules/Aoe_Ayah.xml
+lib/Ayah/                                           lib/Ayah/
+skin/frontend/base/default/css/ayah/                skin/frontend/base/default/css/ayah/
