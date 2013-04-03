@@ -25,9 +25,9 @@
  */
 
 // Only define the AYAH class if it does not already exist.
-if ( ! class_exists('AYAH')):
+//if ( ! class_exists('AYAH')):
 
-class AYAH {
+class Ayah_Ayah {
 	// Set defaults for values that can be specified via the config file or passed in via __construct.
 	protected $ayah_publisher_key = '';
 	protected $ayah_scoring_key = '';
@@ -479,4 +479,4 @@ class AYAH {
 	}
 }
 
-endif;	// if ( ! class_exists('AYAH')):
+//endif;	// if ( ! class_exists('AYAH')):
