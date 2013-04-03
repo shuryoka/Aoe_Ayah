@@ -5,7 +5,7 @@
             <active>true</active>
             <codePool>community</codePool>
             <depends>
-                <Mage_Customer />
+                <Mage_Captcha />
             </depends>
         </Aoe_Ayah>
     </modules>

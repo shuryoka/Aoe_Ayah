@@ -21,10 +21,26 @@
                 <observers>
                     <aoe_ayah_register>
                         <class>ayah/observer</class>
-                        <method>validateAyah</method>
+                        <method>validateAyahRegistration</method>
                     </aoe_ayah_register>
                 </observers>
             </controller_action_predispatch_customer_account_createpost>
+            <controller_action_predispatch_customer_account_loginPost>
+                <observers>
+                    <aoe_ayah_login>
+                        <class>ayah/observer</class>
+                        <method>validateAyahLogin</method>
+                    </aoe_ayah_login>
+                </observers>
+            </controller_action_predispatch_customer_account_loginPost>
+            <controller_action_predispatch_customer_account_forgotpasswordpost>
+                <observers>
+                    <aoe_ayah_password>
+                        <class>ayah/observer</class>
+                        <method>validateAyahForgotPassword</method>
+                    </aoe_ayah_password>
+                </observers>
+            </controller_action_predispatch_customer_account_forgotpasswordpost>
         </events>
     </global>
     <frontend>

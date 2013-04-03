@@ -1,11 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <layout version="0.1.0">
     <customer_account_create>
-        <reference name="head">
-            <action method="addCss"><stylesheet>css/ayah/ayah.css</stylesheet></action>
-        </reference>
         <reference name="form.additional.info">
-            <block type="core/template" name="ayah_check" template="ayah/ayah_check.phtml" />
+            <block type="core/template" name="ayah_check" template="ayah/ayah_check.phtml">
+                <action method="setFormId"><formId>account_create</formId></action>
+            </block>
         </reference>
     </customer_account_create>
+    <customer_account_login>
+        <reference name="form.additional.info">
+            <block type="core/template" name="ayah_check" template="ayah/ayah_check.phtml" >
+                <action method="setFormId"><formId>account_login</formId></action>
+            </block>
+        </reference>
+    </customer_account_login>
+    <customer_account_forgotpassword>
+        <reference name="form.additional.info">
+            <block type="core/template" name="ayah_check" template="ayah/ayah_check.phtml">
+                <action method="setFormId"><formId>forgot_password</formId></action>
+            </block>
+        </reference>
+    </customer_account_forgotpassword>
+    <checkout_onepage_index>
+        <reference name="checkout.onepage.login">
+            <block type="core/text_list" name="form.additional.info">
+                <block type="captcha/captcha" name="captcha">
+                    <reference name="head">
+                        <action method="addJs"><file>mage/captcha.js</file></action>
+                        <action method="addCss"><stylesheet>css/ayah/ayah.css</stylesheet></action>
+                    </reference>
+                    <action method="setFormId"><formId>user_login</formId></action>
+                    <action method="setImgWidth"><width>230</width></action>
+                    <action method="setImgHeight"><width>50</width></action>
+                </block>
+                <block type="core/template" name="ayah_check" template="ayah/ayah_check.phtml">
+                    <action method="setFormId"><formId>checkout_customer</formId></action>
+                </block>
+            </block>
+        </reference><reference name="checkout.onepage.billing">
+            <block type="core/text_list" name="form.additional.info">
+                <block type="captcha/captcha" name="captcha.guest.checkout">
+                    <reference name="head">
+                        <action method="addJs"><file>mage/captcha.js</file></action>
+                    </reference>
+                    <action method="setFormId"><formId>guest_checkout</formId></action>
+                    <action method="setImgWidth"><width>230</width></action>
+                    <action method="setImgHeight"><width>50</width></action>
+                </block>
+                <block type="captcha/captcha" name="captcha.register.during.checkout">
+                    <reference name="head">
+                        <action method="addJs"><file>mage/captcha.js</file></action>
+                    </reference>
+                    <action method="setFormId"><formId>register_during_checkout</formId></action>
+                    <action method="setImgWidth"><width>230</width></action>
+                    <action method="setImgHeight"><width>50</width></action>
+                </block>
+                <block type="core/template" name="ayah_check" template="ayah/ayah_check.phtml">
+                    <action method="setFormId"><formId>checkout_customer</formId></action>
+                </block>
+            </block>
+        </reference>
+    </checkout_onepage_index>
 </layout>

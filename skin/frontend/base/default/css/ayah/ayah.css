@@ -1,1 +1,3 @@
-div.account-create #form-validate li.ayah_register { margin-top: 15px; }
+#checkout-step-login .col-1 { width: 38%; }
+#checkout-step-login .col-2 { width: 58%; }
+#checkout-step-login .col2-set h3 { height: 34px; }

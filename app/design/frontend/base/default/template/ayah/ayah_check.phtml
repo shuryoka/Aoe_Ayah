@@ -1,14 +1,10 @@
-<?php if (Mage::helper('ayah')->isActive()): ?>
-    <?php Mage::helper('ayah')->includeAyah(); ?>
-    <li class="fields ayah_register">
-    <?php
-        $ayah = new AYAH(array(
-            'publisher_key' => Mage::getStoreConfig('ayah/config/publickey'),
-            'scoring_key'   => Mage::getStoreConfig('ayah/config/scorekey'),
-            'debug_mode'    => Mage::getStoreConfigFlag('ayah/config/debug_mode')
-        ));
-        
-        echo $ayah->getPublisherHTML();
-    ?>
+<?php /* @var $this Mage_Core_Block_Template */ ?>
+<?php $ayahHelper = Mage::helper('ayah'); /* @var $ayahHelper Aoe_Ayah_Helper_Data */ ?>
+<?php $formId     = $this->getFormId() ?>
+<?php if ($ayahHelper->getIsActive() && $ayahHelper->getIsFormProtected($formId)): ?>
+    <li class="fields ayah_box">
+        <?php echo $ayahHelper->getHtml() ?>
+        <input type="hidden" name="ayahFormId" value="<?php echo $formId ?>" />
+        <input type="hidden" name="ayahToken" value="<?php echo $this->getRequest()->getQuery('ayah_token') ?>" />
     </li>
 <?php endif ?>
